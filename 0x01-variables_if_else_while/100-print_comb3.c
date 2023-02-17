@@ -6,17 +6,20 @@
  */
 int main(void)
 {
-  int d;
-  for (d = 0; d < 90; d++){
-    for ()
-    {
-      putchar((d / 10) + '0');
-      putchar((d % 10) + '0');
-    }
-    if (d != 89){
-      putchar(',');
-      putchar(' ');
-    }
+  int n;
+  int i;
+
+  for (n = 0; n < 9; n++){
+    i = n + 1;
+    do {
+      putchar('0' + n);
+      putchar('0' + i);
+      if (n < 8){
+	putchar(',');
+	putchar(32);
+      }
+      i++;
+    } while (i < 10);
   }
   putchar('\n');
   return (0);
