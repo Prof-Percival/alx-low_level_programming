@@ -22,6 +22,6 @@ putchar(32);
 i++;
 } while (i < 10);
 }
-  putchar('\n');
-  return (0);
+putchar('\n');
+return (0);
 }
