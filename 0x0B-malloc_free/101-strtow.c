@@ -70,7 +70,7 @@ char **strtow(char *str)
 
 	str_l = wordcount(str);
 	/*return null if str_l == 0 || new == NULL*/
-	string = malloc((str_l + 1) * sizeof(char*));
+	string = malloc((str_l + 1) * sizeof(char *));
 	if (str_l == 0 || string == NULL)
 		return (NULL);
 
@@ -83,7 +83,7 @@ char **strtow(char *str)
 
 			if (str[word] != ' ' && (str[word + 1] == ' ' || str[word + 1] == '\0'))
 			{
-				string[i] = malloc((word - s + 2) *sizeof(char));
+				string[i] = malloc((word - s + 2) * sizeof(char));
 				if (string[i] == NULL)
 				{
 					free_array(string, i);
