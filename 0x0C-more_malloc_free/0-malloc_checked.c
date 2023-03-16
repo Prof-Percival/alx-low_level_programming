@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 #include "main.h"
 /**
  *malloc_checked - array for prints a string
@@ -8,15 +7,11 @@
  *Return: void
  */
 
-void *malloc_checked(unsigned int b)
-{
-void *p;
-
-p = malloc(b);
-if (p == NULL)
-{
-exit(98);
-}
-
-return (p);
+void *malloc_checked(unsigned int b) {
+    void *ptr = malloc(b);
+    if (ptr == NULL) {
+        fprintf(stderr, "Error: Failed to allocate memory\n");
+        exit(98);
+    }
+    return ptr;
 }
